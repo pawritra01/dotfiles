@@ -11,9 +11,16 @@ vim.pack.add({
   -- Plugins
 	{ src="https://github.com/stevearc/oil.nvim" },
   { src="https://github.com/folke/flash.nvim" },
-  { src="https://github.com/nvim-mini/mini.pick" },
   { src="https://github.com/saghen/blink.cmp" },
   { src="https://github.com/nvim-lualine/lualine.nvim" },
+  { src="https://github.com/nvim-treesitter/nvim-treesitter" },
+  { src="https://github.com/FabijanZulj/blame.nvim" },
+
+  -- Mini
+  { src="https://github.com/nvim-mini/mini.starter" },
+  { src="https://github.com/nvim-mini/mini.pairs" },
+  { src="https://github.com/nvim-mini/mini.comment" },
+  { src="https://github.com/nvim-mini/mini.pick" },
 })
 
 
@@ -25,4 +32,10 @@ require("plugins.blink")
 require("plugins.flash")
 require("plugins.mason")
 require("plugins.lualine")
+require("plugins.treesitter")
+require("plugins.mini")
+
+
+require("blame").setup({})
+
 

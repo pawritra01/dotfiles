@@ -1,7 +1,6 @@
 vim.pack.add({
   -- Basic Dependencies
 	{ src="https://github.com/nvim-tree/nvim-web-devicons" },
-  { src="https://github.com/MunifTanjim/nui.nvim" },
 
   -- Theme
   { src="https://github.com/rebelot/kanagawa.nvim" },
@@ -15,7 +14,6 @@ vim.pack.add({
   { src="https://github.com/nvim-mini/mini.pick" },
   { src="https://github.com/saghen/blink.cmp" },
   { src="https://github.com/nvim-lualine/lualine.nvim" },
-  { src="https://github.com/folke/noice.nvim" },
 })
 
 
@@ -27,5 +25,4 @@ require("plugins.blink")
 require("plugins.flash")
 require("plugins.mason")
 require("plugins.lualine")
-require("plugins.noice")
 

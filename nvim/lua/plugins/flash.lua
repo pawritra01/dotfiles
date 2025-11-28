@@ -3,9 +3,9 @@ local f = require("flash")
 f.setup({})
 
 
-vim.keymap.set("n", "s", function() f.jump() end , {silent=true, desc="Flash"})
-vim.keymap.set("x", "s", function() f.jump() end , {silent=true, desc="Flash"})
-vim.keymap.set("o", "s", function() f.jump() end , {silent=true, desc="Flash"})
+vim.keymap.set("n", "fs", function() f.jump() end , {silent=true, desc="Flash"})
+vim.keymap.set("x", "fs", function() f.jump() end , {silent=true, desc="Flash"})
+vim.keymap.set("o", "fs", function() f.jump() end , {silent=true, desc="Flash"})
 
 
 -- { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },

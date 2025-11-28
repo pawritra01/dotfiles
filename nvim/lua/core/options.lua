@@ -1,7 +1,6 @@
 local g = vim.g
 local o = vim.o
 
-g.mapleader = ' '
 
 o.winborder='rounded'
 o.termguicolors = true

@@ -24,18 +24,18 @@ vim.pack.add({
 })
 
 
-require("core.themes.tokyonight")
-
-require("plugins.oil")
 require("plugins.mini")
+require("plugins.treesitter")
+require("core.themes.tokyonight")
 require("plugins.blink")
 require("plugins.flash")
 require("plugins.mason")
 require("plugins.lualine")
-require("plugins.treesitter")
-require("plugins.mini")
 
-
+require("oil").setup({})
 require("blame").setup({})
+
+
+
 
 

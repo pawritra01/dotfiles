@@ -13,6 +13,16 @@ for _, v in pairs(arrows) do
   vim.keymap.set("i", '<C-' .. v .. '>', '<Esc><C-w>' .. v, { silent=true, desc="Move " .. v})
 end
 
+-- Oil
+vim.keymap.set('n', '<leader>-', function() require('oil').toggle_float() end, {silent = true })
+
+-- Blame
+vim.keymap.set('n', '<leader>gb', "<cmd>BlameToggle<cr>", {silent = true })
+
+-- Mini
+vim.keymap.set("n", "<leader><leader>", "<cmd>Pick files<cr>", { silent=true, desc="Pick files" })
+vim.keymap.set("n", "<leader>bb", "<cmd>Pick buffers<cr>", { silent=true, desc="Pick buffers" })
+vim.keymap.set("n", "<leader>/", "<cmd>Pick grep_live<cr>", { silent=true, desc="Pick live_grep" })
 
 -- Quckfix
 vim.keymap.set("n", "<leader>co", "<cmd>copen<cr>", { silent=true, desc="[C]uickfix [O]pen"})

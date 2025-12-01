@@ -6,11 +6,28 @@ blink.setup({
     nerd_font_variant = 'mono'
   },
 
-  completion = { documentation = { auto_show = false } },
+  completion = { 
+    documentation = { auto_show = true },
+    list = {
+      selection = { preselect = false, auto_insert = false },
+    },
+  },
+
+  signature = { enabled = true },
+  snippets = { preset = "luasnip" },
 
   sources = {
     default = { 'lsp', 'path', 'snippets', 'buffer' },
+    providers = {
+      path = {
+        opts = {
+          get_cwd = function(_) return vim.fn.getcwd() end,
+          show_hidden_files_by_default = true,
+          trailing_slash = false,
+        },
+      },
+    },
   },
 
-  fuzzy = { implementation = "lua" }
+  fuzzy = { implementation = "lua" },
 })

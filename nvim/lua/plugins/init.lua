@@ -2,6 +2,9 @@ vim.pack.add({
   -- Basic Dependencies
 	{ src="https://github.com/nvim-tree/nvim-web-devicons" },
 
+  -- Snippets
+	{ src="https://github.com/L3MON4D3/LuaSnip" },
+
   -- Theme
   { src="https://github.com/rebelot/kanagawa.nvim" },
   { src="https://github.com/folke/tokyonight.nvim" },

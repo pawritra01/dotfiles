@@ -1,0 +1,49 @@
+
+* {
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  min-height: 0;
+
+  color: white;
+  font-family: "GeistMono Nerd Font, monospace";
+  font-size: 14px;
+  font-weight: bold;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+
+#workspaces {
+  border-radius: 8px;
+}
+
+#workspaces button {
+  padding: 4px 6px;
+  border-radius: 8px;
+  color: black;
+  font-weight: bold;
+  transition: all 250ms ease-in-out;
+  color: white;
+}
+
+#workspaces button.active {
+  background: rgb(158, 139, 187);
+}
+
+.modules-right, .modules-center, .modules-left {
+  background: rgba(68, 53, 91, 0.45);
+  border-radius: 8px; 
+  padding: 4px 16px;
+}
+
+.modules-left {
+  padding: 4px 8px;
+}
+
+.modules-right .module {
+  margin: 0 12px;
+}

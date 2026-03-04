@@ -1,8 +1,6 @@
 local g = vim.g
 local o = vim.o
 
-
-o.winborder='rounded'
 o.termguicolors = true
 
 -- Do not save when switching buffers
@@ -11,15 +9,13 @@ o.termguicolors = true
 -- Decrease update time
 o.timeoutlen = 500
 o.updatetime = 200
-o.cmdheight = 0
--- o.autochdir = true
 
 -- Number of screen lines to keep above and below the cursor
 o.scrolloff = 25
 
 -- Better editor UI
 o.number = true
-o.numberwidth = 1
+o.numberwidth = 5
 o.relativenumber = true
 o.signcolumn = 'no'
 o.cursorline = true
@@ -43,5 +39,17 @@ o.clipboard = 'unnamedplus'
 o.ignorecase = true
 o.smartcase = true
 
--- Diagnostic
-vim.diagnostic.config({ virtual_text = true })
+
+-- Undo and backup options
+o.backup = false
+o.writebackup = false
+o.undofile = true
+o.swapfile = false
+o.backupdir = '/tmp/'
+o.directory = '/tmp/'
+o.undodir = '/tmp/'
+o.history = 50
+
+-- Better buffer splitting
+o.splitright = true
+o.splitbelow = true

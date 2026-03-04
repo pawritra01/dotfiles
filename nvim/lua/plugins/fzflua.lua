@@ -1,16 +1,21 @@
-require("fzf-lua").setup ({
-  "telescope",
-  -- MISC GLOBAL SETUP OPTIONS, SEE BELOW
-  -- fzf_bin = ...,
-  -- each of these options can also be passed as function that return options table
-  -- e.g. winopts = function() return { ... } end
-  -- winopts = { ...  },     -- UI Options
-  -- keymap = { ...  },      -- Neovim keymaps / fzf binds
-  -- actions = { ...  },     -- Fzf "accept" binds
-  -- fzf_opts = { ...  },    -- Fzf CLI flags
-  -- fzf_colors = { ...  },  -- Fzf `--color` specification
-  -- hls = { ...  },         -- Highlights
-  -- previewers = { ...  },  -- Previewers options
-  -- SPECIFIC COMMAND/PICKER OPTIONS, SEE BELOW
-  -- files = { ... },
-})
+return {
+  "ibhagwan/fzf-lua",
+  lazy = false,
+  -- optional for icon support
+  dependencies = { "nvim-tree/nvim-web-devicons" },
+  -- or if using mini.icons/mini.nvim
+  -- dependencies = { "nvim-mini/mini.icons" },
+  ---@module "fzf-lua"
+  ---@type fzf-lua.Config|{}
+  ---@diagnostic disable: missing-fields
+  opts = {},
+  ---@diagnostic enable: missing-fields
+  ---
+  keys = {
+	{ "<leader>f", "<cmd>FzfLua files<cr>", mode="n", desc = "Find Files" },
+	{ "<leader>gf", "<cmd>FzfLua live_grep<cr>", desc = "Git Files" },
+	{ "<leader><leader>", "<cmd>FzfLua buffers<cr>", desc = "Find buffers" },
+
+	{ "<leader>/", "<cmd>FzfLua live_grep<cr>", desc = "Live Grep" },
+  }
+}

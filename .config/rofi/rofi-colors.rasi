@@ -1,0 +1,154 @@
+* {
+    primary: #e8b5ef;
+    primary-fixed: #fcd6ff;
+    primary-fixed-dim: #e8b5ef;
+    on-primary: #472150;
+    on-primary-fixed: #300a3a;
+    on-primary-fixed-variant: #603768;
+    primary-container: #603768;
+    on-primary-container: #fcd6ff;
+    secondary: #d6c0d6;
+    secondary-fixed: #f3dbf2;
+    secondary-fixed-dim: #d6c0d6;
+    on-secondary: #3a2b3c;
+    on-secondary-fixed: #241727;
+    on-secondary-fixed-variant: #524153;
+    secondary-container: #524153;
+    on-secondary-container: #f3dbf2;
+    tertiary: #f5b7b0;
+    tertiary-fixed: #ffdad6;
+    tertiary-fixed-dim: #f5b7b0;
+    on-tertiary: #4c2521;
+    on-tertiary-fixed: #33110e;
+    on-tertiary-fixed-variant: #673b36;
+    tertiary-container: #673b36;
+    on-tertiary-container: #ffdad6;
+    error: #ffb4ab;
+    on-error: #690005;
+    error-container: #93000a;
+    on-error-container: #ffdad6;
+    surface: #171217;
+    on-surface: #eae0e7;
+    on-surface-variant: #cfc3cd;
+    outline: #988e97;
+    outline-variant: #4c444c;
+    shadow: #000000;
+    scrim: #000000;
+    inverse-surface: #eae0e7;
+    inverse-on-surface: #342f34;
+    inverse-primary: #794f81;
+    surface-dim: #171217;
+    surface-bright: #3d373d;
+    surface-container-lowest: #110d11;
+    surface-container-low: #1f1a1f;
+    surface-container: #231e23;
+    surface-container-high: #2e282e;
+    surface-container-highest: #393338;
+}
+
+
+window {
+    border: 0;
+    padding: 5;
+}
+mainbox {
+    border:  0;
+    padding: 0;
+}
+message {
+    // padding:      1px ;
+}
+textbox {
+    text-color: @primary;
+}
+listview {
+    fixed-height: 0;
+    spacing:      4px ;
+    scrollbar:    true;
+    // padding:      2px 0px 0px ;
+}
+element {
+    border:  0;
+    padding: 4 ;
+}
+element-text {
+    background-color: inherit;
+    text-color:       @on-primary;
+}
+// element.normal.normal {
+//     background-color: @surface;
+//     text-color:       @on-primary;
+// }
+// element.normal.urgent {
+//     background-color: @urgent-background;
+//     text-color:       @urgent-foreground;
+// }
+// element.normal.active {
+//     background-color: @primary;
+//     text-color:       @on-primary;
+// }
+element.selected.normal {
+    background-color: @primary;
+    text-color:       @on-primary;
+    border-radius: 2;
+}
+// element.selected.urgent {
+//     background-color: @selected-urgent-background;
+//     text-color:       @selected-urgent-foreground;
+// }
+// element.selected.active {
+//     background-color: @selected-active-background;
+//     text-color:       @selected-active-foreground;
+// }
+// element.alternate.normal {
+//     background-color: @alternate-normal-background;
+//     text-color:       @alternate-normal-foreground;
+// }
+// element.alternate.urgent {
+//     background-color: @alternate-urgent-background;
+//     text-color:       @alternate-urgent-foreground;
+// }
+// element.alternate.active {
+//     background-color: @alternate-active-background;
+//     text-color:       @alternate-active-foreground;
+// }
+scrollbar {
+    width:        0px ;
+    border:       0;
+    handle-width: 0px ;
+    padding:      0;
+    margin: 0px;
+}
+mode-switcher {
+    // border-color: @outline;
+}
+// button.selected {
+//     background-color: @selected-normal-background;
+//     text-color:       @selected-normal-foreground;
+// }
+inputbar {
+    spacing:    0;
+    text-color: @on-primary;
+    padding: 0;
+    margin: 0;
+    border-radius: 2;
+}
+case-indicator {
+    spacing:    0;
+    text-color: @on-primary;
+}
+entry {
+    spacing:    0;
+    text-color: @on-primary;
+    background-color: @secondary;
+    padding: 4;
+}
+prompt {
+    spacing:    0;
+    text-color: @on-primary;
+    background-color: @secondary;
+    padding: 4;
+}
+// inputbar {
+//     children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+// }

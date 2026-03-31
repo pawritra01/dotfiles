@@ -1,0 +1,62 @@
+@import url("./colors-waybar.css");
+
+* {
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  min-height: 0;
+
+  color: @primary;
+  font-family: "GeistMono Nerd Font, monospace";
+  font-size: 14px;
+  font-weight: bold;
+}
+
+window#waybar {
+  background: transparent;
+  padding-right: 8px;
+  margin-right: 8px;
+  margin: 10px 15px 0px 15px; /* Margin: Top, Right, Bottom, Left */
+  border-radius: 12px;
+}
+
+
+#workspaces {
+  border-radius: 8px;
+}
+
+#workspaces button {
+  padding: 4px 6px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 250ms ease-in-out;
+}
+
+#waybar button:hover {
+    background: @on-primary;
+    transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+  background: @on-primary;
+  color: black;
+}
+
+.modules-right, .modules-center, .modules-left {
+  background: @primary-container;
+  border-radius: 8px; 
+  padding: 2px 16px;
+}
+
+.modules-left {
+  padding: 6px 8px;
+}
+
+.modules-right * {
+  padding: 6px 16px;
+}
+
+.modules-right, .modules-left, .modules-center {
+  margin: 2px 8px 0px 8px;
+}

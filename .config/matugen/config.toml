@@ -1,0 +1,17 @@
+[config]
+
+[templates.rofi] # First way of adding template
+input_path = './templates/rofi-colors.rasi'
+output_path = '~/dotfiles/.config/rofi/rofi-colors.rasi'
+
+[templates.waybar] # First way of adding template
+input_path = './templates/colors-waybar.css'
+output_path = '~/dotfiles/.config/waybar/colors-waybar.css'
+
+[templates.kitty] # First way of adding template
+input_path = './templates/kitty-colors.conf'
+output_path = '~/dotfiles/.config/kitty/kitty-colors.conf'
+
+[templates.hyprland] # First way of adding template
+input_path = './templates/hyprland-colors.conf'
+output_path = '~/dotfiles/.config/hypr/hyprland-colors.conf'

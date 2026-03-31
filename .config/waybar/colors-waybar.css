@@ -1,6 +1,6 @@
-@define-color primary #e8b5ef;
-@define-color primary-container rgba(96, 55, 104, 0.6);
-@define-color on-primary-container #fcd6ff;
-@define-color on-primary #472150;
-@define-color inverse-primary #794f81;
-@define-color primary-fixed-dim #e8b5ef;
+@define-color primary #9ecafc;
+@define-color primary-container rgba(22, 73, 116, 0.6);
+@define-color on-primary-container #d0e4ff;
+@define-color on-primary #003256;
+@define-color inverse-primary #34618d;
+@define-color primary-fixed-dim #9ecafc;

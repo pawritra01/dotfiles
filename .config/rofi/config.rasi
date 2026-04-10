@@ -3,7 +3,7 @@ configuration {
   display-windows: "Windows: ";
   drun-display-format: "{icon} {name}";
   font: "VictorMono NF";
-   modi: "window,drun,run";
+   modi: "window,drun";
    show-icons: true;
    icon-theme: "Papirun";
 }

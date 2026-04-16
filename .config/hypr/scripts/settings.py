@@ -1,11 +1,12 @@
 import subprocess as sp
 
-from settings import power_options, wallpaper_switcher, audio_options
+from settings import power_options, wallpaper_switcher, audio_options, hyprland_options
 
 if __name__ == '__main__':
     options = [
         *wallpaper_switcher.get_commands(),
         *audio_options.get_commands(),
+        *hyprland_options.get_commands(),
         *power_options.get_commands(),
     ]
 
@@ -19,3 +20,4 @@ if __name__ == '__main__':
         power_options.handler(selection)
         wallpaper_switcher.handler(selection)
         audio_options.handler(selection)
+        hyprland_options.handler(selection)

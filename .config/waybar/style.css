@@ -9,7 +9,7 @@
 
   color: @primary;
   font-family: "GeistMono Nerd Font, monospace";
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
 }
 
@@ -27,7 +27,7 @@ window#waybar {
 }
 
 #workspaces button {
-  padding: 4px 6px;
+  padding: 2px 4px;
   border-radius: 8px;
   font-weight: bold;
   transition: all 250ms ease-in-out;

@@ -1,9 +1,5 @@
 require("mason").setup()
 
-vim.lsp.config("*", {
-  auto_trigger = true,
-})
-
 vim.lsp.enable("rust-analyzer")
 vim.lsp.enable("eslint")
 vim.lsp.enable("ts_ls")

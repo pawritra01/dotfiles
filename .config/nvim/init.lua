@@ -127,7 +127,8 @@ vim.pack.add({
 	"https://github.com/mason-org/mason.nvim",
   "https://github.com/saghen/blink.cmp",
   "https://github.com/folke/flash.nvim",
-  "https://github.com/nvim-mini/mini.surround"
+  "https://github.com/nvim-mini/mini.surround",
+  { src = 'https://github.com/mrcjkb/rustaceanvim', version = vim.version.range('^9')}
 })
 
 

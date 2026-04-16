@@ -1,12 +1,40 @@
-#!/usr/bin/env python3
+import subprocess as sp
 
-import subprocess
+NAME = "[AUDIO]"
+
+COMMANDS = ["Change Audio Input"]
+
+def get_commands():
+    f_commands = []
+    for command in COMMANDS:
+        f_commands.append(NAME + " " + command)
+
+    return f_commands
+
+def handler(selection: str):
+    input = selection.replace(NAME + " ", "")
+    match input:
+        case "Change Audio Input":
+            return change_audio_input()
+
+
+def change_audio_input():
+    sinks = get_sinks()
+
+    # Format for display
+    options = [f"{s['index']}: {s['name']}" for s in sinks]
+
+    choice = rofi_menu(options)
+
+    if choice:
+        sp.run(['pactl', 'set-default-sink', choice.split(' ')[0]])
+        print("Selected:", choice)
 
 def get_sinks():
-    result = subprocess.run(
+    result = sp.run(
         ["pactl", "list", "sinks"],
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
+        stdout=sp.PIPE,
+        stderr=sp.PIPE,
         text=True,
         check=True
     )
@@ -35,25 +63,13 @@ def get_sinks():
     return sinks
 
 def rofi_menu(options):
-    rofi = subprocess.Popen(
+    rofi = sp.Popen(
         ["rofi", "-dmenu", "-p", "Select Sink"],
-        stdin=subprocess.PIPE,
-        stdout=subprocess.PIPE,
+        stdin=sp.PIPE,
+        stdout=sp.PIPE,
         text=True
     )
 
     menu_input = "\n".join(options)
     out, _ = rofi.communicate(menu_input)
     return out.strip()
-
-if __name__ == "__main__":
-    sinks = get_sinks()
-
-    # Format for display
-    options = [f"{s['index']}: {s['name']}" for s in sinks]
-
-    choice = rofi_menu(options)
-
-    if choice:
-        subprocess.run(['pactl', 'set-default-sink', choice.split(' ')[0]])
-        print("Selected:", choice)

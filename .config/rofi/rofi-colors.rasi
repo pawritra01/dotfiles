@@ -1,7 +1,7 @@
 * {
-    primary: #96ccf8;
-    on-primary: #00344f;
-    background: rgba(0, 75, 112, 0.9);
+    primary: #9ecafc;
+    on-primary: #003256;
+    background: rgba(22, 73, 116, 0.9);
 }
 
 * {

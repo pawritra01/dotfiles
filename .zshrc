@@ -77,3 +77,6 @@ export PATH="$HOME/Apps/nvim/bin:$PATH"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 . "$HOME/.local/bin/env"
+
+
+export ANDROID_HOME="/home/pawritra/Android/sdk"
